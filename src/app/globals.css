@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+  background-image: theme('backgroundImage.mesh-gradient');
+  background-attachment: fixed;
+}
+
+.container-px {
+  @apply px-4 md:px-6;
+}
+
+.glass {
+  @apply bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl;
+}
+
+.section {
+  @apply container container-px py-16 md:py-24;
+}
+
+h1, h2, h3 {
+  @apply font-display tracking-tight;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #2aa6ff, #7c3aed 60%, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+a {
+  @apply hover:opacity-90 transition;
+}
